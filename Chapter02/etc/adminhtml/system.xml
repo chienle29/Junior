@@ -7,7 +7,7 @@
         <section id="clock_configration" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Clock Configration</label>
             <tab>magenest</tab>
-            <resource>Junior\Chapter02::clock_config</resource>
+            <resource>Junior_Chapter02::clock_config</resource>
             <group id="default_clock" translate="label" type="text" sortOrder="1" showInDefault="1">
                 <label>Default Clock</label>
                 <field id="title_clock" translate="label" type="text" sortOrder="1" showInDefault="1">
