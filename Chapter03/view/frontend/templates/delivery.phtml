@@ -1,0 +1,21 @@
+<div class="field">
+    <label style="font-weight: bold;">Date and time of delivery : </label><br>
+    <input type="text" class="input-text" id="example-date" style="width: auto" name="example-date" />
+</div>
+
+<script>
+    require([
+        'jquery',
+        'mage/translate',
+        'mage/calendar'
+    ], function ($, $t) {
+        $('#example-date').calendar({
+            changeMonth: true,
+            changeYear: true,
+            showButtonPanel: true,
+            currentText: $t('Go Today'),
+            closeText: $t('Close'),
+            showWeek: true
+        });
+    })
+</script>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Junior_Chapter03/css/style.css" />
+    </head>
+    <body>
+        <referenceBlock name="product.info">
+            <referenceContainer name="product.info.form.content">
+                <block name="delivery-field" class="Junior\Chapter03\Block\Delivery" template="Junior_Chapter03::delivery.phtml"
+                       before="product.info.addtocart"/>
+            </referenceContainer>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block name="custom.form.magenest.block"
+                   template="Junior_Chapter03::knockoutTest.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Junior_Chapter02::Clock"
+            title="Clock"
+            module="Junior_Chapter02"
+            sortOrder="20"
+            resource="Cate_Sub::clock"
+            translate="title"
+        />
+        <add
+            id="Junior_Chapter02::manager"
+            translate="title"
+            title="Countdown Management"
+            module="Junior_Chapter02"
+            sortOrder="60"
+            parent="Junior_Chapter02::Clock"
+            resource="Junior_Chapter02::manager"
+            action="cataloger/index/index"
+        />
+        <add
+            id="Junior_Chapter02::config"
+            translate="title"
+            title="Clock Configration"
+            module="Junior_Chapter02"
+            sortOrder="61"
+            parent="Junior_Chapter02::Clock"
+            resource="Junior_Chapter02::config"
+            action="admin/system_config/edit/section/clock_configration/"
+        />
+    </menu>
+</config>

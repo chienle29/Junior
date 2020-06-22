@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/static/Orbitron-Bold.ttf');
+}
+
+.clock-main{
+    font-family: 'Orbitron';
+}

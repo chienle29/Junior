@@ -1,0 +1,24 @@
+{
+    "magenest_rules": {
+        "column": {
+            "id": true,
+            "title": true,
+            "status": true,
+            "rule_type": true,
+            "conditions_serialized": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "magenest_model_load": {
+        "column": {
+            "id": true,
+            "time_load": true,
+            "time_save": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

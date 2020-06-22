@@ -1,0 +1,35 @@
+.component-wrapper {
+    border: 1px solid #ddd;
+    padding: 30px;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: block;
+    color: #333;
+    font-weight: bold;
+}
+
+.button-convert {
+    background: #288ad6;
+    border: none;
+    padding: 11px 20px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.button-tandardize {
+    background: yellowgreen;
+    color: #333;
+}
+
+.content-main-wapper {
+    margin: 30px 0;
+}
+
+#custom-component{
+    display: inline-block;
+    width: 100%;
+}

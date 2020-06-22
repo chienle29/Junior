@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Junior_Chapter02/css/clock.css" rel="stylesheet" type="text/css"  />
+    </head>
+    <body>
+        <referenceBlock name="header-wrapper">
+            <container name="clock_container_xample" htmlTag="div" htmlClass="clock-main">
+                <block class="Junior\Chapter02\Block\Clock" name="clock_block" template="Junior_Chapter02::clock.phtml">
+                </block>
+            </container>
+        </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magenest" translate="label" sortOrder="200">
+            <label>Magenest</label>
+        </tab>
+        <section id="clock_configration" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Clock Configration</label>
+            <tab>magenest</tab>
+            <resource>Junior\Chapter02::clock_config</resource>
+            <group id="default_clock" translate="label" type="text" sortOrder="1" showInDefault="1">
+                <label>Default Clock</label>
+                <field id="title_clock" translate="label" type="text" sortOrder="1" showInDefault="1">
+                    <label>Title Clock</label>
+                </field>
+                <field id="size_clock" translate="label" type="select" sortOrder="2" showInDefault="1">
+                    <label>Size Clock</label>
+                    <source_model>Junior\Chapter02\Model\Config\Source\SizeClock</source_model>
+                </field>
+                <field id="my_color_option" translate="label" type="text" sortOrder="3" showInDefault="1">
+                    <label>Color Clock</label>
+                    <frontend_model>Junior\Chapter02\Block\Adminhtml\Color</frontend_model>
+                </field>
+                <field id="text_color" translate="label" type="text" sortOrder="4" showInDefault="1">
+                    <label>Text Color</label>
+                    <frontend_model>Junior\Chapter02\Block\Adminhtml\Color</frontend_model>
+                </field>
+                <field id="clock_type" translate="label" sortOrder="5" showInDefault="1">
+                    <label>Clock Type</label>
+                    <frontend_model>Junior\Chapter02\Block\Adminhtml\Type</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

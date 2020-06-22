@@ -1,0 +1,58 @@
+<?php
+if($block->getSize() == 'small')
+{
+    $size = '15px';
+}else if($block->getSize() == 'normal')
+{
+    $size = '18px';
+}else{
+    $size = '21px';
+}
+?>
+<style>
+    .clock-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: <?= $block->getBackgroundColor(); ?>;
+    }
+    #demo{
+        padding: 15px;
+        margin:0;
+        color:<?= $block->getTextColor(); ?>;
+        font-size:<?= $size ?>;
+        font-weight:bold;
+        border-radius: 5px;
+        letter-spacing: 7px;
+    }
+
+</style>
+<p id="demo"></p>
+<script>
+    function clock(){
+        //Khởi tạo đối tượng timer sử dụng Date Object
+        var timer = new Date();
+        //Gọi các phương thức của đối tượng timer
+        var hour = timer.getHours();  //Lấy giờ hiện tại (giá trị từ 0 - 23)
+        var minute = timer.getMinutes();  //Lấy phút hiện tại
+        var second = timer.getSeconds();  //Lấy giây  hiện tại
+        var session = "AM";
+        //Thêm ký tự 0 đằng trước nếu giờ, phút, giây < 10 với câu lệnh điều khiển if
+        if(hour < 10) {
+            hour = "0" + hour;
+        }
+        if(minute < 10) {
+            minute = "0" + minute;
+        }
+        if(second < 10) {
+            second = "0" + second;
+        }
+        if(hour > 12){
+            session = "PM";
+        }
+        //Hiện thị thời gian lên thẻ div id="clock" với phương thức innerHTML
+        document.getElementById("demo").innerHTML = hour + ":" + minute + ":" + second + " " + session;
+    }
+    //Thực hiện hàm clock theo chu kỳ 1 giây
+    setInterval("clock()",1000);
+</script>
