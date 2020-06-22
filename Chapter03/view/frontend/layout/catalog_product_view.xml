@@ -14,6 +14,7 @@
         <referenceContainer name="content">
             <block name="custom.form.magenest.block"
                    template="Junior_Chapter03::knockoutTest.phtml"/>
+            <block name="custom.jquery.widget" template="Junior_Chapter03::buttonWidget.phtml" />
         </referenceContainer>
     </body>
 </page>

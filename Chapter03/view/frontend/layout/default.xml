@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Junior_Chapter03/css/style.css" rel="stylesheet" type="text/css"  />
+    </head>
+    <body>
+        <referenceContainer name="top.container">
+            <block name="switch_color" class="Junior\Chapter03\Block\HomeBackground" template="Junior_Chapter03::homeBackground.phtml" />
+        </referenceContainer>
+    </body>
+</page>

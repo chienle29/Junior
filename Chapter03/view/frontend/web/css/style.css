@@ -33,3 +33,59 @@ label {
     display: inline-block;
     width: 100%;
 }
+#color-custom{
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+}
+
+.block-left{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -24px;
+    width: 30px;
+    height: 60px;
+    background: #333;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+.option{
+    background: #333;
+    color: #fff;
+    padding: 10px 20px 20px 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 180px;
+    position: relative;
+    right:-220px;
+}
+.same-color{
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 10px 0;
+    cursor: pointer;
+}
+.animate-add{
+    animation: animate-to-right forwards 0.6s;
+}
+@keyframes animate-to-right {
+    0%{
+        right:0;
+    }
+    100%{
+        right:-220px;
+    }
+}
+.animate-remove{
+    animation: animate-to-left forwards 0.6s;
+}
+@keyframes animate-to-left {
+    0%{
+        right:-220px;
+    }
+    100%{
+        right:0;
+    }
+}
