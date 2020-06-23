@@ -11,21 +11,21 @@ use Magento\Customer\Model\ResourceModel\Group\CollectionFactory;
 
 class UpgradeData implements UpgradeDataInterface
 {
-    protected $magenestFactory;
+    protected $rulesFactory;
     protected $json;
     protected $serialize;
     protected $categorySetupFactory;
     protected $customer;
 
     public function __construct(
-        \Junior\Chapter01\Model\MagenestFactory $magenestFactory,
+        \Junior\Chapter01\Model\RulesFactory $rulesFactory,
         Json $json,
         Serialize $serialize,
         \Magento\Catalog\Setup\CategorySetupFactory $categorySetupFactory,
         CollectionFactory $customerFactory
     )
     {
-        $this->magenestFactory = $magenestFactory;
+        $this->rulesFactory = $rulesFactory;
         $this->json = $json;
         $this->serialize = $serialize;
         $this->categorySetupFactory = $categorySetupFactory;
@@ -40,12 +40,12 @@ class UpgradeData implements UpgradeDataInterface
         $version = $productMetadata->getVersion();
         $currentVersion = (float)$version;
         //get data column conditions_serialized
-        $data = $this->magenestFactory->create()->getCollection()->addFieldToSelect(array('id', 'conditions_serialized'));
+        $data = $this->rulesFactory->create()->getCollection()->addFieldToSelect(array('id', 'conditions_serialized'));
         //compare
         foreach ($data->getData() as $value) {
             $isSerialized = $this->isSerialized($value['conditions_serialized']);
             $arr = $isSerialized ? $this->serialize->unserialize($value['conditions_serialized']) : $this->json->unserialize($value['conditions_serialized']);
-            $table = $this->magenestFactory->create()->load($value['id']);
+            $table = $this->rulesFactory->create()->load($value['id']);
 
             if ($currentVersion < 2.2) {
                 $table->setConditionsSerialized($this->json->serialize($arr));

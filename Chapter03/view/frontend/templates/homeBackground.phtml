@@ -1,0 +1,19 @@
+<div id="color-custom" data-bind="scope:'colorcustom'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+    {
+        "#color-custom": {
+            "Magento_Ui/js/core/app": {
+               "components": {
+                    "colorcustom": {
+                        "component": "Junior_Chapter03/js/background",
+                        "data": <?= \Zend_Json::encode($block->getTitle()) ?>
+                    }
+                }
+            }
+        }
+    }
+
+    </script>
+
+</div>
