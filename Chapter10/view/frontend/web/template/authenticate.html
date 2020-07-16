@@ -1,0 +1,64 @@
+<!--The 'step_code' value from the .js file should be used-->
+<li id="step_code" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Login Information'" data-role="title"></div>
+    <div id="checkout-step-title"
+         class="step-content"
+         data-role="content">
+
+        <form data-bind="submit: navigateToNextStep" id="custom-form">
+            <!-- ko ifnot: isLogin() -->
+            <div class="container">
+                <div class="same username">
+                    <label for="username" data-bind="i18n: 'Email/Phone Number *'" data-role="title"></label>
+                    <input type="text" name="username" id="username">
+                    <div class="err err-user"></div>
+                </div>
+                <div class="same password">
+                    <div class="column-2">
+                        <label for="password" data-bind="i18n: 'Password *'" data-role="title"></label>
+                        <a href="http://chien.lc/customer/account/forgotpassword/" data-bind="i18n: 'Forgot Password?'" data-role="title"></a>
+                    </div>
+                    <input type="password" name="passwordAuth" id="password">
+                    <div class="err err-pass"></div>
+                </div>
+                <button type="submit" name="submitAth" class="submit-auth" id="submit-auth">Login</button>
+                <div class="link">
+                    <a href="http://chien.lc/customer/account/create/">Register</a>
+                </div>
+                <div class="link">
+                    <a href="javascript:void(0)">Payment without login</a>
+                </div>
+
+                <div class="or-sign-in">
+                    <div class="or-sign-in-title">or sign in with</div>
+                </div>
+
+                <div class="associal">
+                    <a href="javascript:void(0)" class="face">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="javascript:void(0)" class="google">
+                        <i class="fab fa-google"></i>
+                        <span>Google</span>
+                    </a>
+                </div>
+                <div class="back-to-cart">
+                    <a href="cart">
+                        <span class="back-to-cart-icon"></span>
+                        Back to cart
+                    </a>
+                </div>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: isLogin() -->
+            <div style="color: #d09944;font-size: 17px;">You are already logged in</div>
+            <!-- /ko -->
+        </form>
+    </div>
+</li>
+
+<div class="loading-contain">
+    <div class="loading-content">
+    </div>
+</div>

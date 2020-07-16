@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Junior_Chapter06::magenest"
+            translate="title"
+            title="Magenest"
+            module="Junior_Chapter06"
+            sortOrder="30"
+            resource="Junior_Chapter06::magenest"
+        />
+        <add
+            id="Junior_Chapter06::chapter06"
+            translate="title"
+            title="Junior Chapter06"
+            module="Junior_Chapter06"
+            sortOrder="1"
+            resource="Junior_Chapter06::magenest_rules"
+            parent="Junior_Chapter06::magenest"
+        />
+        <add
+            id="Junior_Chapter06::list_magenest"
+            translate="title"
+            title="Magenest Rules"
+            module="Junior_Chapter06"
+            sortOrder="1"
+            resource="Junior_Chapter06::magenest_rules"
+            parent="Junior_Chapter06::chapter06"
+            action="magenest/rules/index"
+        />
+    </menu>
+</config>

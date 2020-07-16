@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <!--plugin change product name when product have special price-->
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="junior_chapter08_change_name_product" type="Junior\Chapter08\Plugin\ChangeProductName" />
+    </type>
+</config>

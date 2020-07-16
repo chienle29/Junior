@@ -1,0 +1,12 @@
+<?php if(!empty($block->getOrder()['name']) || !empty($block->getOrder()['message'])): ?>
+<h4>Message Information</h4>
+<hr />
+<div class="message-receive">
+    <span class="message-receive-title">Name Receive</span>
+    <div class="message-content"><?= $block->getOrder()['name']; ?></div>
+</div>
+<div class="message-receive">
+    <span class="message-receive-title">Message Content</span>
+    <div class="message-content"><?= $block->getOrder()['message']; ?></div>
+</div>
+<?php endif ?>

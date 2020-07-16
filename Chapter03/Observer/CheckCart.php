@@ -25,9 +25,11 @@ class CheckCart implements ObserverInterface
 
         // Check and set information according to your need
         $date = $this->_request->getParam('example-date');
-        if(!empty($date)){
+        if(!empty($date))
+        {
             $product = $observer->getProduct();
-            if ($this->_request->getFullActionName() == 'checkout_cart_add') {
+            if ($this->_request->getFullActionName() == 'checkout_cart_add')
+            {
                 //checking when product is adding to cart
                 $product = $observer->getProduct();
                 $additionalOptions = [];

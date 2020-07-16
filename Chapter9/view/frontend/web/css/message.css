@@ -1,0 +1,15 @@
+#custom-product-message-gift{
+    border: 1px solid #906d78;
+    margin-bottom: 20px;
+}
+.gift-card{
+    text-transform: uppercase;
+    color: #fff;
+    background: #80a922;
+    padding: 10px;
+    font-size: 15px;
+}
+.gift-card-child{
+    padding: 10px;
+}
+

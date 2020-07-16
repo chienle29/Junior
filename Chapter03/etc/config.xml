@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <color_option_section>
+            <color_option_group>
+                <color_field>
+                    {"_1592874220700_700":{"color":"chienle","color_code":"#874e87"},"_1592874221726_726":{"color":"b","color_code":"#c27ec2"},"_1592874222701_701":{"color":"c","color_code":"#7a7a7a"},"_1592874223557_557":{"color":"df","color_code":"#c218c2"},"_1592874244723_723":{"color":"f","color_code":"#5e095e"},"_1592874245319_319":{"color":"e","color_code":"#ff0808"},"_1592874245965_965":{"color":"t","color_code":"#ffffff"},"_1592874246621_621":{"color":"y","color_code":"#9de600"},"_1592874247471_471":{"color":"u","color_code":"#eb8484"},"_1592874248358_358":{"color":"h","color_code":"#000000"},"_1592874292709_709":{"color":"j","color_code":"#c408c4"},"_1592874293340_340":{"color":"k","color_code":"#a39696"},"_1592874293962_962":{"color":"l","color_code":"#030203"},"_1592874316118_118":{"color":"l","color_code":"#006b9c"},"_1592874316841_841":{"color":"l","color_code":"#613161"},"_1592874317499_499":{"color":"m","color_code":"#cfd446"},"_1592874318385_385":{"color":"fg","color_code":"#d17575"},"_1593058945121_121":{"color":"ghyt","color_code":"#a839a8"},"_1593058953108_108":{"color":"klkl","color_code":"#9c9c9c"}}
+                </color_field>
+            </color_option_group>
+        </color_option_section>
+    </default>
+</config>

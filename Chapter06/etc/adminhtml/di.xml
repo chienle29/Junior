@@ -1,0 +1,18 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <!--data source magenest_rules grid-->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="junior_chapter06_magenest_demo_listing_data_source" xsi:type="string">megenest_rules_collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="megenest_rules_collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magenest_rules</argument>
+            <argument name="resourceModel" xsi:type="string">Junior\Chapter01\Model\ResourceModel\Rules</argument>
+        </arguments>
+    </virtualType>
+
+    <preference for="Junior\Chapter06\Api\MagenestRepositoryInterface" type="Junior\Chapter06\Model\MagenestRepository" />
+</config>

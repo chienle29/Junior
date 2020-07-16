@@ -47,7 +47,7 @@ class UpgradeData implements UpgradeDataInterface
             $arr = $isSerialized ? $this->serialize->unserialize($value['conditions_serialized']) : $this->json->unserialize($value['conditions_serialized']);
             $table = $this->rulesFactory->create()->load($value['id']);
 
-            if ($currentVersion < 2.2) {
+            if ($currentVersion > 2.2) {
                 $table->setConditionsSerialized($this->json->serialize($arr));
             } else {
                 $table->setConditionsSerialized($this->serialize->serialize($arr));

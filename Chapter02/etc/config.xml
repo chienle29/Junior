@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <clock_configration>
+            <default_clock>
+                <title_clock>Title Clock 2</title_clock>
+                <size_clock>big</size_clock>
+                <my_color_option>#FFFFFF</my_color_option>
+                <text_color>#210b21</text_color>
+            </default_clock>
+        </clock_configration>
+    </default>
+</config>

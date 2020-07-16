@@ -1,0 +1,17 @@
+<div id="navigation-custom" data-bind="scope: 'navigationcustom'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#navigation-custom": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "navigationcustom": {
+                            "component": "Junior_Chapter10/js/navigation",
+                            "data": <?= \Zend_Json::encode($block->getPrice()); ?>
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</div>

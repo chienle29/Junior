@@ -1,0 +1,7 @@
+.item-magenest.parent.level-0 > a:before {
+    background-image: url(../images/f0dc4a5977166f3d65accc4d5c6d2026.png);
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

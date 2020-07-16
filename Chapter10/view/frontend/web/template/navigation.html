@@ -1,0 +1,16 @@
+<div class="navigation-main">
+    <div class="navigation-container">
+        <a href="javascript:void(0)" class="navigation-title" data-bind="click: getPrevStep">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> behind
+        </a>
+
+        <span id="total-custom" data-bind="text: grandTotal() ? getPrice() : getValue()"></span>
+
+        <a href="javascript:void(0)" class="navigation-title" id="navigation-title-next" data-bind="click: getNextStep">
+            <span data-bind="text: content"></span>
+            <!-- ko if: grandTotal() -->
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <!-- /ko -->
+        </a>
+    </div>
+</div>

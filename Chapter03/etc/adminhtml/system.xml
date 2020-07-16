@@ -7,7 +7,7 @@
             <resource>Cate_Demo::color_option</resource>
             <group id="color_option_group" translate="label" type="text" sortOrder="1" showInDefault="1">
                 <label>Color</label>
-                <field id="color_field" translate="label" sortOrder="5" showInDefault="1">
+                <field id="color_field" translate="label" sortOrder="5" showInDefault="1" canRestore="1">
                     <label>Color Options</label>
                     <frontend_model>Junior\Chapter03\Block\Adminhtml\Background</frontend_model>
                     <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>

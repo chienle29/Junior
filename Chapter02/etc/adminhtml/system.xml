@@ -10,18 +10,18 @@
             <resource>Junior_Chapter02::clock_config</resource>
             <group id="default_clock" translate="label" type="text" sortOrder="1" showInDefault="1">
                 <label>Default Clock</label>
-                <field id="title_clock" translate="label" type="text" sortOrder="1" showInDefault="1">
+                <field id="title_clock" translate="label" type="text" sortOrder="1" showInDefault="1" canRestore="1">
                     <label>Title Clock</label>
                 </field>
-                <field id="size_clock" translate="label" type="select" sortOrder="2" showInDefault="1">
+                <field id="size_clock" translate="label" type="select" sortOrder="2" showInDefault="1" canRestore="1">
                     <label>Size Clock</label>
                     <source_model>Junior\Chapter02\Model\Config\Source\SizeClock</source_model>
                 </field>
-                <field id="my_color_option" translate="label" type="text" sortOrder="3" showInDefault="1">
+                <field id="my_color_option" translate="label" type="text" sortOrder="3" showInDefault="1" canRestore="1">
                     <label>Color Clock</label>
                     <frontend_model>Junior\Chapter02\Block\Adminhtml\Color</frontend_model>
                 </field>
-                <field id="text_color" translate="label" type="text" sortOrder="4" showInDefault="1">
+                <field id="text_color" translate="label" type="text" sortOrder="4" showInDefault="1" canRestore="1">
                     <label>Text Color</label>
                     <frontend_model>Junior\Chapter02\Block\Adminhtml\Color</frontend_model>
                 </field>

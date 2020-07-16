@@ -3,4 +3,7 @@
     <event name="catalog_product_collection_load_after">
         <observer name="load_product_edit" instance="Junior\Chapter05\Observer\LoadProductEdit" />
     </event>
+    <event name="catalog_product_save_after">
+        <observer name="save_product_edit" instance="Junior\Chapter05\Observer\SaveProductEdit" />
+    </event>
 </config>

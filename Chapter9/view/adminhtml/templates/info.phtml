@@ -1,0 +1,13 @@
+<h4>Message Information</h4>
+<hr />
+<br />
+<?php if(!empty($block->getMessage()['name']) && !empty($block->getMessage()['message'])): ?>
+<div class="message-receive">
+    <span class="message-receive-title">Name Receive</span>
+    <div class="message-content"><?= $block->getMessage()['name']; ?></div>
+</div>
+<div class="message-receive">
+    <span class="message-receive-title">Message Content</span>
+    <div class="message-content"><?= $block->getMessage()['message']; ?></div>
+</div>
+<?php endif; ?>

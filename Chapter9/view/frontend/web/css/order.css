@@ -1,0 +1,29 @@
+h4{
+    font-weight: normal;
+    font-size: 21px;
+}
+.message-receive{
+    position: relative;
+    margin-bottom: 70px;
+}
+.message-content{
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    transform: translateY(-50%);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background:#ddd;
+}
+.message-content:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -18px;
+    border-right: 10px solid #ddd;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    transform: translateY(-50%);
+}

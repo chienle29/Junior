@@ -97,5 +97,38 @@ class UpgradeData implements UpgradeDataInterface
                 'sort_order' => 9,
             ));
         }
+
+        //associate these attributes with new product type
+        $fieldList = [
+            'price',
+            'special_price',
+            'special_from_date',
+            'special_to_date',
+            'minimal_price',
+            'cost',
+            'tier_price',
+            'weight',
+            'custom_magenest',
+            'Customer_Groups'
+        ];
+        foreach ($fieldList as $field) {
+            $applyTo = explode(
+                ',',
+                $categorySetup->getAttribute(\Magento\Catalog\Model\Product::ENTITY, $field, 'apply_to')
+            );
+            if (!in_array('custom_product_type_code', $applyTo)) {
+                $applyTo[] = 'custom_product_type_code';
+                $categorySetup->updateAttribute(
+                    \Magento\Catalog\Model\Product::ENTITY,
+                    $field,
+                    'apply_to',
+                    implode(',', $applyTo)
+                );
+            }
+        }
+
+        $applyTo = explode(',', $categorySetup->getAttribute(\Magento\Catalog\Model\Product::ENTITY, 'cost', 'apply_to'));
+        unset($applyTo[array_search('custom_product_type_code', $applyTo)]);
+        $categorySetup->updateAttribute(\Magento\Catalog\Model\Product::ENTITY, 'cost', 'apply_to', implode(',', $applyTo));
     }
 }
